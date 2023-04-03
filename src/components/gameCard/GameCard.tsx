@@ -7,9 +7,10 @@ import {
   Flex,
   Heading,
   Image,
+  Text,
 } from "@chakra-ui/react";
-import { SiXbox, SiWindows, SiPlaystation } from "react-icons/si";
 import { Game } from "../../hooks/useGameList";
+import PlatformIconList from "../platformIconList/PlatformIconList";
 
 interface Props {
   game: Game;
@@ -21,6 +22,9 @@ const GameCard = ({ game }: Props) => {
       <Image src={game.background_image}></Image>
       <CardBody>
         <Heading fontSize="xl">{game.name}</Heading>
+        <PlatformIconList
+          platforms={game.parent_platforms.map((p) => p.platform)}
+        />
       </CardBody>
     </Card>
   );
