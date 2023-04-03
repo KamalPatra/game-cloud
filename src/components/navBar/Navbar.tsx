@@ -29,16 +29,7 @@ const Navbar = () => {
         <Input placeholder="Search Games" fontSize="16" />
       </InputGroup>
       <Box>
-        <Flex alignItems={"center"}>
-          <Button variant={"link"} colorScheme="white" mr="5">
-            LOG IN
-          </Button>
-          <Button variant={"link"} colorScheme="white" mr="5">
-            SIGN UP
-          </Button>
-
-          <DarkModeToggle />
-        </Flex>
+        <DarkModeToggle />
       </Box>
     </HStack>
   );

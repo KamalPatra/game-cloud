@@ -11,7 +11,6 @@ function App() {
         base: `"nav" "main"`,
         lg: `"nav nav" "sidebar main"`,
       }}
-      gridTemplateColumns={`300px 1fr`}
     >
       <GridItem area={`nav`}>
         <Navbar />
