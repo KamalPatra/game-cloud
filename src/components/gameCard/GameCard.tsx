@@ -1,42 +1,28 @@
 import {
   AspectRatio,
   Box,
+  Card,
+  CardBody,
   Container,
   Flex,
   Heading,
   Image,
 } from "@chakra-ui/react";
 import { SiXbox, SiWindows, SiPlaystation } from "react-icons/si";
-const GameCard = () => {
+import { Game } from "../../hooks/useGameList";
+
+interface Props {
+  game: Game;
+}
+
+const GameCard = ({ game }: Props) => {
   return (
-    <Box w="300px" borderRadius="5">
-      <Box mb="3">
-        <AspectRatio maxW="300px" ratio={4 / 3}>
-          <Image
-            src="https://bit.ly/naruto-sage"
-            alt="naruto"
-            objectFit="cover"
-          />
-        </AspectRatio>
-      </Box>
-      <Box mb="3">
-        <Flex>
-          <Box mr="2">
-            <SiWindows />
-          </Box>
-          <Box mr="2">
-            <SiPlaystation />
-          </Box>
-          <Box mr="2">
-            <SiXbox />
-          </Box>
-        </Flex>
-      </Box>
-      <Box>
-        <Heading size="lg">Naruto</Heading>
-      </Box>
-      <Box></Box>
-    </Box>
+    <Card borderRadius={10} overflow={"hidden"}>
+      <Image src={game.background_image}></Image>
+      <CardBody>
+        <Heading fontSize="xl">{game.name}</Heading>
+      </CardBody>
+    </Card>
   );
 };
 
