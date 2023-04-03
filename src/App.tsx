@@ -1,4 +1,5 @@
 import { Flex, Grid, GridItem, Show } from "@chakra-ui/react";
+import GameGrid from "./components/gameGrid/GameGrid";
 import Main from "./components/mainScreen/Main";
 import Navbar from "./components/navBar/Navbar";
 import Sidebar from "./components/sideBar/Sidebar";
@@ -21,7 +22,7 @@ function App() {
         </GridItem>
       </Show>
       <GridItem area={`main`}>
-        <Main />
+        <GameGrid />
       </GridItem>
     </Grid>
   );

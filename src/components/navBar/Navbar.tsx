@@ -16,7 +16,7 @@ import { SearchIcon } from "@chakra-ui/icons";
 import DarkModeToggle from "../darkModeToggle/DarkModeToggle";
 const Navbar = () => {
   return (
-    <HStack justifyContent="space-around">
+    <HStack justifyContent="space-around" p="4">
       <Button
         leftIcon={<IoGameControllerOutline size={30} />}
         variant="link"
