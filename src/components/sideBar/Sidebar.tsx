@@ -17,8 +17,8 @@ import GenreList from "../genreList/GenreList";
 const Sidebar = () => {
   return (
     <Box>
-      <Container paddingTop={8} paddingLeft={8}>
-        <Heading fontSize="3xl" marginY={1}>
+      <Container paddingTop={8} paddingLeft={5}>
+        <Heading fontSize="3xl" marginY={2}>
           <Link>Home</Link>
         </Heading>
         <GenreList></GenreList>
