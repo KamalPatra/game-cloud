@@ -10,14 +10,14 @@ import {
 import useGenreList from "../../hooks/useGenreList";
 
 const GenreList = () => {
-  const { genres, error, isLoading } = useGenreList();
+  const { data } = useGenreList();
   return (
     <>
       <Heading fontSize="3xl" marginY={1}>
         Genres
       </Heading>
       <List>
-        {genres.map((genre) => (
+        {data.map((genre) => (
           <ListItem key={genre.id} marginY={2}>
             <HStack>
               <Box borderRadius="5px" overflow="hidden">
