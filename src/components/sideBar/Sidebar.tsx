@@ -1,8 +1,8 @@
 import {
   Box,
-  Button,
   Container,
   Flex,
+  Heading,
   Image,
   Link,
   List,
@@ -12,67 +12,16 @@ import {
 } from "@chakra-ui/react";
 import action from "../../assets/icons/action-icon.png";
 import strategy from "../../assets/icons/strategy-icon.png";
+import GenreList from "../genreList/GenreList";
 
 const Sidebar = () => {
   return (
-    <Box p="9">
-      <Container>
-        <Text fontSize="3xl" fontWeight="600">
+    <Box>
+      <Container paddingTop={8} paddingLeft={8}>
+        <Heading fontSize="3xl" marginY={1}>
           <Link>Home</Link>
-        </Text>
-        <Text fontSize="3xl" fontWeight="600">
-          Genres
-        </Text>
-        <List>
-          <ListItem mb="1">
-            <Flex>
-              <Image
-                boxSize="30px"
-                objectFit="cover"
-                src={action}
-                alt="Dan Abramov"
-                mr="2"
-              />
-              <Text>Action</Text>
-            </Flex>
-          </ListItem>
-          <ListItem>
-            <Flex>
-              <Image
-                boxSize="30px"
-                objectFit="cover"
-                src={strategy}
-                alt="Dan Abramov"
-                mr="2"
-              />
-              <Text>Strategy</Text>
-            </Flex>
-          </ListItem>
-          <ListItem>
-            <ListIcon />
-            RPG
-          </ListItem>
-          <ListItem>
-            <ListIcon />
-            Shooter
-          </ListItem>
-          <ListItem>
-            <ListIcon />
-            Adventure
-          </ListItem>
-          <ListItem>
-            <ListIcon />
-            Puzzle
-          </ListItem>
-          <ListItem>
-            <ListIcon />
-            Racing
-          </ListItem>
-          <ListItem>
-            <ListIcon />
-            Sports
-          </ListItem>
-        </List>
+        </Heading>
+        <GenreList></GenreList>
       </Container>
     </Box>
   );
