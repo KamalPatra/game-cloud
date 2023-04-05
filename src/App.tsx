@@ -29,6 +29,7 @@ function App() {
           {/* <Sidebar /> */}
           <Container paddingTop={8} paddingLeft={5}>
             <GenreList
+              selectedGenre={genre}
               onSelectGenre={(genre) => {
                 setGenre(genre);
               }}
