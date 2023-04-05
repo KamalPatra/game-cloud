@@ -21,7 +21,7 @@ const Sidebar = () => {
         <Heading fontSize="3xl" marginY={2}>
           <Link>Home</Link>
         </Heading>
-        <GenreList></GenreList>
+        {/* <GenreList></GenreList> */}
       </Container>
     </Box>
   );
