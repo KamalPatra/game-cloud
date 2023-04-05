@@ -18,9 +18,12 @@ const Navbar = () => {
   return (
     <HStack justifyContent="space-around" p="4">
       <Button
+        fontSize="lg"
         leftIcon={<IoGameControllerOutline size={30} />}
         variant="link"
-      ></Button>
+      >
+        GAMES
+      </Button>
       <InputGroup size="lg" borderRadius="100" w="70%">
         <InputLeftElement
           pointerEvents="none"

@@ -15,6 +15,7 @@ import {
 import { useState } from "react";
 import { BsChevronDown } from "react-icons/bs";
 import GameCard from "../gameCard/GameCard";
+import GameGrid from "../gameGrid/GameGrid";
 
 const Main = () => {
   const [order, setOrder] = useState("Relevance");
@@ -58,37 +59,7 @@ const Main = () => {
             </MenuOptionGroup>
           </MenuList>
         </Menu>
-        <Menu>
-          <MenuButton
-            as={Button}
-            colorScheme="blue"
-            rightIcon={<BsChevronDown />}
-          >
-            Platform
-          </MenuButton>
-          <MenuList minWidth="240px" color="black">
-            <MenuOptionGroup defaultValue="Platform">
-              <MenuItemOption value="Platform">Platform</MenuItemOption>
-              <MenuItemOption value="Clear">Clear</MenuItemOption>
-            </MenuOptionGroup>
-            <MenuDivider />
-            <MenuOptionGroup type="radio">
-              <MenuItemOption value="PC">PC</MenuItemOption>
-              <MenuItemOption value="PlayStation">PlayStation</MenuItemOption>
-              <MenuItemOption value="Xbox">Xbox</MenuItemOption>
-              <MenuItemOption value="iOS">iOS</MenuItemOption>
-              <MenuItemOption value="Android">Android</MenuItemOption>
-              <MenuItemOption value="Apple Macintosh">
-                Apple Macintosh
-              </MenuItemOption>
-              <MenuItemOption value="Linux">Linux</MenuItemOption>
-              <MenuItemOption value="Nintendo">Nintendo</MenuItemOption>
-              <MenuItemOption value="Web">Web</MenuItemOption>
-            </MenuOptionGroup>
-          </MenuList>
-        </Menu>
       </Flex>
-      <GameCard />
     </Box>
   );
 };
