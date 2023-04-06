@@ -1,6 +1,7 @@
 import { Box, Container, Grid, GridItem, Show } from "@chakra-ui/react";
 import { useState } from "react";
 import GameGrid from "./components/gameGrid/GameGrid";
+import GameHeading from "./components/gameHeading/GameHeading";
 import GenreList from "./components/genreList/GenreList";
 import Navbar from "./components/navBar/Navbar";
 import PlatformSelector from "./components/platformSelector/PlatformSelector";
@@ -48,6 +49,9 @@ function App() {
         </GridItem>
       </Show>
       <GridItem area={`main`}>
+        <Box marginLeft={3} marginBottom={5}>
+          <GameHeading gameQuery={gameQuery} />
+        </Box>
         <Box marginLeft={3} marginBottom={5}>
           <SortSelector
             selectedSortOrder={gameQuery.sortOrder}
