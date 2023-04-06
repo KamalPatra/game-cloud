@@ -1,18 +1,13 @@
 import {
   Box,
   Button,
-  Container,
-  Flex,
   HStack,
   Input,
   InputGroup,
   InputLeftElement,
-  Switch,
-  Text,
 } from "@chakra-ui/react";
 import { BiSearch } from "react-icons/bi";
 import { IoGameControllerOutline } from "react-icons/io5";
-import { SearchIcon } from "@chakra-ui/icons";
 import DarkModeToggle from "../darkModeToggle/DarkModeToggle";
 const Navbar = () => {
   return (
