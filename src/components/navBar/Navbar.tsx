@@ -1,31 +1,21 @@
-import {
-  Box,
-  Button,
-  HStack,
-  Input,
-  InputGroup,
-  InputLeftElement,
-} from "@chakra-ui/react";
-import { BiSearch } from "react-icons/bi";
+import { Box, Button, HStack } from "@chakra-ui/react";
 import { IoGameControllerOutline } from "react-icons/io5";
 import DarkModeToggle from "../darkModeToggle/DarkModeToggle";
-const Navbar = () => {
+import SearchInput from "../searchInput/SearchInput";
+
+interface Props {
+  onSearch: (searchText: string) => void;
+}
+
+const Navbar = ({ onSearch }: Props) => {
   return (
     <HStack justifyContent="space-around" p="4">
       <Button
         fontSize="lg"
         leftIcon={<IoGameControllerOutline size={30} />}
         variant="link"
-      >
-        GAMES
-      </Button>
-      <InputGroup size="lg" borderRadius="100" w="70%">
-        <InputLeftElement
-          pointerEvents="none"
-          children={<BiSearch size="16" />}
-        />
-        <Input placeholder="Search Games" fontSize="16" />
-      </InputGroup>
+      ></Button>
+      <SearchInput onSearch={onSearch} />
       <Box>
         <DarkModeToggle />
       </Box>
