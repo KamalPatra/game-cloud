@@ -13,6 +13,7 @@ const SearchInput = ({ onSearch }: Props) => {
         e.preventDefault();
         if (ref.current) onSearch(ref.current.value);
       }}
+      style={{ width: "70%" }}
     >
       <InputGroup size="lg">
         <InputLeftElement
