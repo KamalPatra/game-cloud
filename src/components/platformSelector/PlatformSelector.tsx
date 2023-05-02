@@ -10,7 +10,7 @@ import {
 
 import { BsChevronDown } from "react-icons/bs";
 import { Platform } from "../../hooks/useGameList";
-import usePlatform from "../../hooks/usePlatforms";
+import usePlatforms from "../../react-query/hooks/usePlatforms";
 
 interface Props {
   onSelectPlatform: (platform: Platform) => void;
@@ -18,7 +18,7 @@ interface Props {
 }
 
 const PlatformSelector = ({ onSelectPlatform, selectedPlatform }: Props) => {
-  const { data, error } = usePlatform();
+  const { data, error } = usePlatforms();
   if (error) return null;
   return (
     <Menu>
@@ -32,7 +32,7 @@ const PlatformSelector = ({ onSelectPlatform, selectedPlatform }: Props) => {
         </MenuOptionGroup>
         <MenuDivider /> */}
         <MenuOptionGroup type="radio">
-          {data.map((platform) => (
+          {data?.results.map((platform) => (
             <MenuItemOption
               key={platform.id}
               value={platform.name}
