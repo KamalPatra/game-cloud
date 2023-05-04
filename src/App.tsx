@@ -10,8 +10,8 @@ import { Genre } from "./react-query/hooks/useGenreList";
 import { Platform } from "./react-query/hooks/usePlatforms";
 
 export interface GameQuery {
-  genre: Genre | null;
-  platform: Platform | null;
+  genreId?: number;
+  platformId?: number;
   sortOrder: string;
   searchText: string;
 }
@@ -40,9 +40,9 @@ function App() {
           {/* <Sidebar /> */}
           <Container paddingTop={8} paddingLeft={5}>
             <GenreList
-              selectedGenre={gameQuery.genre}
+              selectedGenreId={gameQuery.genreId}
               onSelectGenre={(genre) => {
-                setGameQuery({ ...gameQuery, genre });
+                setGameQuery({ ...gameQuery, genreId: genre.id });
               }}
             />
           </Container>
@@ -60,9 +60,9 @@ function App() {
             }
           />
           <PlatformSelector
-            selectedPlatform={gameQuery.platform}
+            selectedPlatformId={gameQuery.platformId}
             onSelectPlatform={(platform) =>
-              setGameQuery({ ...gameQuery, platform })
+              setGameQuery({ ...gameQuery, platformId: platform.id })
             }
           />
         </Box>
