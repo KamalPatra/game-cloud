@@ -1,4 +1,4 @@
-import { Platform } from "../../hooks/useGameList";
+import { Platform } from "../../react-query/hooks/usePlatforms";
 import { HStack, Icon, Text } from "@chakra-ui/react";
 import {
   SiAndroid,

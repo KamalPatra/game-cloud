@@ -1,18 +1,13 @@
 import { SimpleGrid, Text } from "@chakra-ui/react";
 import React from "react";
-import { GameQuery } from "../../App";
 import useGameList from "../../react-query/hooks/useGameList";
 import GameCard from "../gameCard/GameCard";
 import GameCardContainer from "../gameCardContainer/GameCardContainer";
 import InfiniteScroll from "react-infinite-scroll-component";
 import GameCardLoader from "../gameCardLoader/GameCardLoader";
 
-interface Props {
-  gameQuery: GameQuery;
-}
-const GameGrid = ({ gameQuery }: Props) => {
-  const { data, error, isLoading, fetchNextPage, hasNextPage } =
-    useGameList(gameQuery);
+const GameGrid = () => {
+  const { data, error, isLoading, fetchNextPage, hasNextPage } = useGameList();
 
   if (error) return <Text>{error.message}</Text>;
 

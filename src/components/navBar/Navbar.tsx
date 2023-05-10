@@ -3,11 +3,7 @@ import { IoGameControllerOutline } from "react-icons/io5";
 import DarkModeToggle from "../darkModeToggle/DarkModeToggle";
 import SearchInput from "../searchInput/SearchInput";
 
-interface Props {
-  onSearch: (searchText: string) => void;
-}
-
-const Navbar = ({ onSearch }: Props) => {
+const Navbar = () => {
   return (
     <HStack justifyContent="space-around" p="4">
       <Button
@@ -15,7 +11,7 @@ const Navbar = ({ onSearch }: Props) => {
         leftIcon={<IoGameControllerOutline size={30} />}
         variant="link"
       ></Button>
-      <SearchInput onSearch={onSearch} />
+      <SearchInput />
       <Box>
         <DarkModeToggle />
       </Box>
