@@ -5,7 +5,13 @@ interface Props {
 const GameCriticScore = ({ score }: Props) => {
   let color = score > 75 ? "green" : score > 60 ? "yellow" : "red";
   return (
-    <Badge variant="outline" paddingX="2" fontSize="14px" colorScheme={color}>
+    <Badge
+      variant="outline"
+      fontSize="14px"
+      paddingX={2}
+      colorScheme={color}
+      borderRadius="md"
+    >
       {score}
     </Badge>
   );
