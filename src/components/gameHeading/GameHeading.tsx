@@ -14,7 +14,7 @@ const GameHeading = () => {
     genre?.name || ""
   } Games`;
   return (
-    <Heading size="4xl" mb="2">
+    <Heading size={["lg", "4xl"]} mb="2">
       {heading}
     </Heading>
   );

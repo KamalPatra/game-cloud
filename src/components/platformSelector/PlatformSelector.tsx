@@ -22,7 +22,11 @@ const PlatformSelector = () => {
 
   return (
     <Menu>
-      <MenuButton as={Button} rightIcon={<BsChevronDown />}>
+      <MenuButton
+        as={Button}
+        rightIcon={<BsChevronDown />}
+        fontSize={["0.8rem", "1rem"]}
+      >
         {platform?.name || "Platform"}
       </MenuButton>
       <MenuList minWidth="240px">
