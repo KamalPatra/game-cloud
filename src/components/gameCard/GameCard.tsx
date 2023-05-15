@@ -11,7 +11,6 @@ interface Props {
 }
 
 const GameCard = ({ game }: Props) => {
-  console.log(game);
   return (
     <Card borderRadius={10} overflow={"hidden"} margin={1}>
       <Image
