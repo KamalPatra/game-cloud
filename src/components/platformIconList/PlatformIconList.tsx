@@ -1,4 +1,4 @@
-import { Platform } from "../../react-query/hooks/usePlatforms";
+import { Platform } from "../../entities/Platform";
 import { HStack, Icon, Text } from "@chakra-ui/react";
 import {
   SiAndroid,
