@@ -1,4 +1,5 @@
 import { Card, CardBody, Heading, HStack, Image } from "@chakra-ui/react";
+import { Link } from "react-router-dom";
 import { Game } from "../../react-query/hooks/useGameList";
 import getCroppedImageUrl from "../../services/image-url";
 import Emoji from "../emoji/Emoji";
@@ -10,6 +11,7 @@ interface Props {
 }
 
 const GameCard = ({ game }: Props) => {
+  console.log(game);
   return (
     <Card borderRadius={10} overflow={"hidden"} margin={1}>
       <Image
@@ -24,7 +26,7 @@ const GameCard = ({ game }: Props) => {
           <GameCriticScore score={game.metacritic} />
         </HStack>
         <Heading fontSize="xl" marginY={1}>
-          {game.name}
+          <Link to={`/games/${game.slug}`}>{game.name}</Link>
           <Emoji rating_top={game.rating_top} />
         </Heading>
       </CardBody>
